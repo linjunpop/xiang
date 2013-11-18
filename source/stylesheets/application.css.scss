@@ -1,4 +1,5 @@
 @import 'foundation_and_overrides';
+@import 'variables';
 
 body {
   background-image: image-url('bg.png');
@@ -13,80 +14,89 @@ body {
     margin: 3em auto 5em auto;
   }
 
-  .hero {
-    height: 667px;
-    background-image: image-url('hero.jpg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    @media #{$retina} {
-      background-image: image-url('hero@2x.jpg');
-    }
+  section {
+    height: $section-height;
 
-    .hero-body{
-      padding: 30px 0 0 0;
-      background-color: rgba(235, 94, 99, 0.9);
-      height: 100%;
-      color: white;
-      text-align: center;
-
-      p.hero-names {
-        display: block;
-        width: 298px;
-        height: 265px;
-        text-indent: -9999px;
-        margin: 35px auto 34px;
-        background-position:50% 0;
-        background-repeat:no-repeat;
-        background-size: 298px 265px;
-        background-image: image-url('logo.png');
-        @media #{$retina} {
-          background-image: image-url('logo@2x.png');
-        }
-
+    &.hero {
+      background-image: image-url('hero.jpg');
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      @media #{$retina} {
+        background-image: image-url('hero@2x.jpg');
       }
 
-      .hero-info {
-        display: block;
-        width: 273px;
-        height: 131px;
-        text-indent: -9999px;
-        margin: 0 auto;
-        background-position:50% 0;
-        background-repeat:no-repeat;
-        background-size: 273px 131px;
-        background-image: image-url('info.png');
-        @media #{$retina} {
-          background-image: image-url('info@2x.png');
+      .hero-body{
+        padding: 30px 0 0 0;
+        background-color: rgba(235, 94, 99, 0.9);
+        height: 100%;
+        color: white;
+        text-align: center;
+
+        p.hero-names {
+          display: block;
+          width: 298px;
+          height: 265px;
+          text-indent: -9999px;
+          margin: 35px auto 34px;
+          background-position:50% 0;
+          background-repeat:no-repeat;
+          background-size: 298px 265px;
+          background-image: image-url('logo.png');
+          @media #{$retina} {
+            background-image: image-url('logo@2x.png');
+          }
+
+        }
+
+        .hero-info {
+          display: block;
+          width: 273px;
+          height: 131px;
+          text-indent: -9999px;
+          margin: 0 auto;
+          background-position:50% 0;
+          background-repeat:no-repeat;
+          background-size: 273px 131px;
+          background-image: image-url('info.png');
+          @media #{$retina} {
+            background-image: image-url('info@2x.png');
+          }
+
+          p {
+            display: none;
+          }
         }
 
         p {
-          display: none;
+          font-size: em-calc(36);
+          margin: 10px 0;
+          padding: 0;
+          line-height: $header-line-height;
         }
-      }
-
-      p {
-        font-size: em-calc(36);
-        margin: 10px 0;
-        padding: 0;
-        line-height: $header-line-height;
-      }
 
 
-      .hero-heart {
-        display: none;
-        a {
-          font-size: em-calc(79);
-          color: #f9829b;
+        .hero-heart {
+          display: none;
+          a {
+            font-size: em-calc(79);
+            color: #f9829b;
+          }
         }
       }
     }
-  }
 
-  .place {
-    height: 740px;
+    &.place {
+      #map-canvas {
+        height: 100%;
+      }
+    }
 
-    #map-canvas {
-      height: 100%;
+    &.join {
+      background-color: #CFD2B7;
+      line-height: $section-height;
+
+      .join-button {
+      }
     }
   }
 }
