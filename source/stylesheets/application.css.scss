@@ -1,0 +1,11 @@
+@import 'foundation_and_overrides';
+@import 'welcome';
+
+body {
+  background-image: image-url('bg.png');
+
+  @media #{$retina} {
+    background-image: image-url('bg@2x.png');
+  }
+}
+
