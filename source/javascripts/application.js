@@ -10,7 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_self
 //= require_tree .
+//= require_self
 //
+
+$(".welcome").onepage_scroll();
 

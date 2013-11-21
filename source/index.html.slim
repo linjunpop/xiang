@@ -1,18 +1,26 @@
-.row.welcome
-  .large-12.columns
-    section.hero.row
-      .hero-body.large-5.large-offset-7.small-12.columns
-        p.hero-names 林俊&原香
-
-        .hero-info
-	        p.hero-date 2014.01.01
-	        p.hero-place 明溪县幸福大酒店
-	        p.hero-time 晚 五点三十分
-
-    section.place.row
-      #map-canvas
-    section.join.row
-      .small-12.large-5.large-centered.columns
-        = link_to '我要参加', 'https://jinshuju.net/f/p5YcAC',
-          class: 'join-button large button expand'
+.welcome
+  section.intro
+    h1 Jun & Xiang
+    h2 ARE MARRIED
+    h3 Yay!
+  section.photos
+    .large-6.columns
+      .img.photo-jun
+      h3 JUN
+    .large-6.columns
+      .img.photo-xiang
+      h3 XIANG
+  section.day-and-venue
+    .large-6.columns.day
+      h1 THE DAY
+      p 周三
+      p 2014.01.01
+    .large-6.columns.venue
+      h1 THE VENUE
+      p
+        = link_to '明溪县幸福大酒店',
+          'http://maps.apple.com/?lsp=0&sll=26.358227,117.205865&q=Xingfu%20Hotel%20Xuefengzhen&hnear=26.358227,117.205865'
+  section.join
+    .large-12.columns
+      h1 = link_to '我要参加', 'https://jinshuju.net/f/p5YcAC'
 

@@ -1,103 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Alex+Brush);
 @import 'foundation_and_overrides';
 @import 'variables';
 
+@import 'lib/onepage';
+
 body {
-  background-image: image-url('bg.png');
+  background-color: #AD6676;
+}
 
-  @media #{$retina} {
-    background-image: image-url('bg@2x.png');
+section {
+  padding: 200px 0 0 0;
+  /*height: $section-height;*/
+}
+
+.intro {
+  background-color: #C44D58;
+  text-align: center;
+
+  h1 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 82px;
+  }
+  h2 {
+    font-family: 'Avenir Next';
+    font-size: 32px;
+    font-weight: 500;
+  }
+  h3 {
+    font-family: 'Alex Brush', cursive;
+    color: #556270;
   }
 }
 
-.welcome {
-  @media #{$large} {
-    margin: 3em auto 5em auto;
+.photos {
+  text-align: center;
+  background-color: #556270;
+
+  h3 {
+    margin: 30px 0 0 0;
+    font-family: 'Avenir Next';
+    color: #FF6B6B;
   }
 
-  section {
-    height: $section-height;
+  .img {
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
+    margin: 0 auto;
+    border:1px solid #FFF118;
+    box-shadow: 0 0 10px rgb(242, 255, 3);
+    background-size: 300px;
+  }
+  .photo-jun {
+    background-image: image-url('jun.jpg');
 
-    &.hero {
-      background-image: image-url('hero.jpg');
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-      @media #{$retina} {
-        background-image: image-url('hero@2x.jpg');
-      }
-
-      .hero-body{
-        padding: 30px 0 0 0;
-        background-color: rgba(235, 94, 99, 0.9);
-        height: 100%;
-        color: white;
-        text-align: center;
-
-        p.hero-names {
-          display: block;
-          width: 298px;
-          height: 265px;
-          text-indent: -9999px;
-          margin: 35px auto 34px;
-          background-position:50% 0;
-          background-repeat:no-repeat;
-          background-size: 298px 265px;
-          background-image: image-url('logo.png');
-          @media #{$retina} {
-            background-image: image-url('logo@2x.png');
-          }
-
-        }
-
-        .hero-info {
-          display: block;
-          width: 273px;
-          height: 131px;
-          text-indent: -9999px;
-          margin: 0 auto;
-          background-position:50% 0;
-          background-repeat:no-repeat;
-          background-size: 273px 131px;
-          background-image: image-url('info.png');
-          @media #{$retina} {
-            background-image: image-url('info@2x.png');
-          }
-
-          p {
-            display: none;
-          }
-        }
-
-        p {
-          font-size: em-calc(36);
-          margin: 10px 0;
-          padding: 0;
-          line-height: $header-line-height;
-        }
-
-
-        .hero-heart {
-          display: none;
-          a {
-            font-size: em-calc(79);
-            color: #f9829b;
-          }
-        }
-      }
+    @media #{$retina} {
+      background-image: image-url('jun@2x.jpg');
     }
-
-    &.place {
-      #map-canvas {
-        height: 100%;
-      }
-    }
-
-    &.join {
-      background-color: #CFD2B7;
-      line-height: $section-height;
-
-      .join-button {
-      }
+  }
+  .photo-xiang {
+    background-image: image-url('xiang.jpg');
+    @media #{$retina} {
+      background-image: image-url('xiang@2x.jpg');
     }
   }
 }
 
+.day-and-venue {
+  background-color: #4ECDC4;
+
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 28px;
+    line-height: 39px;
+    padding: 0px;
+    margin: 0 0 7px 0;
+  }
+  .day {
+    text-align: center;
+  }
+
+  .venue {
+    text-align: center;
+  }
+}
+
+.join {
+  text-align: center;
+  background-color: #FF6B6B;
+
+  a {
+    font-size: em-calc(24);
+    color: #556270;
+  }
+}

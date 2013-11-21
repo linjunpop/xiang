@@ -3,11 +3,12 @@ html
   head
     meta charset="utf-8"
 
-    title Jun and Xiang | #{current_page.data.title || 'January 1st, 2014' }
+    title Jun & Xiang are getting married. Yay! #{current_page.data.title}
 
     meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 
     = stylesheet_link_tag "application", media: 'all'
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
 
   body[class=page_classes]
     = yield
