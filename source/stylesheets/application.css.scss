@@ -47,8 +47,8 @@ body {
 
 section {
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 .intro {
@@ -82,6 +82,10 @@ section {
   padding-top: 20vh;
   text-align: center;
   background-color: #556270;
+
+  ul {
+    margin: 0;
+  }
 
   h3 {
     margin: 30px 0 0 0;
@@ -118,8 +122,8 @@ section {
 
 .venue {
   #map-canvas {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   }
 }
 
