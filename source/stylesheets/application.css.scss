@@ -12,18 +12,17 @@ $retina: "only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min-resolution: 2dppx)";
 
 html, body { height: 100%; }
-
 body {
+  font-family: 'Avenir Next';
 }
+
 .nav {
-  @include background(
-    linear-gradient(top, hsla(244, 13, 83, 0.1), hsla(244, 13, 83, 0.7))
-  );
+  background-color: hsla(1, 12, 100, 0.7);
   list-style-type: none;
   margin: 0;
   padding: 0;
   position: fixed;
-  bottom: 0;
+  bottom: 2vh;
   width: 100vw;
   height: 50px;
   font-size: 28px;
@@ -36,10 +35,11 @@ body {
     text-align: center;
 
     a {
-      color: white;
+      color: #AEBBC9;
+      text-shadow: 0 0 0 #000;
 
       &:hover {
-        color: #AD6676;
+        color: #805841;
       }
     }
   }
@@ -49,10 +49,11 @@ section {
   position: relative;
   height: 100vh;
   width: 100vw;
+  padding-bottom: 10vh;
 }
 
 .intro {
-  background-color: #AD6676;
+  background-color: #FFFCDD;
   padding-top: 20vh;
   text-align: center;
 
@@ -71,7 +72,7 @@ section {
     @include swing(2s, 3s, ease, both, visible);
 
     font-family: 'Alex Brush', cursive;
-    color: #556270;
+    color: #AD6676;
   }
   h4 {
     @include bounceInDown(2s, 5s, ease, both, hidden);
@@ -81,7 +82,7 @@ section {
 .photos {
   padding-top: 20vh;
   text-align: center;
-  background-color: #556270;
+  background-color: #DCF7F3;
 
   ul {
     margin: 0;
@@ -90,7 +91,7 @@ section {
   h3 {
     margin: 30px 0 0 0;
     font-family: 'Avenir Next';
-    color: #FF6B6B;
+    color: #805841;
     font-weight: 100;
   }
 
@@ -101,8 +102,7 @@ section {
     height: 300px;
     border-radius: 150px;
     margin: 0 auto;
-    border:1px solid #FFF118;
-    box-shadow: 0 0 10px rgb(242, 255, 3);
+    box-shadow: 0 0 10px #F5A2A2;
     background-size: 300px;
   }
   .photo-jun {
@@ -129,17 +129,15 @@ section {
 
 .day {
   padding-top: 20vh;
-  background-color: #4ECDC4;
+  background-color: #805841;
   text-align: center;
 
   h1 {
-    font-size: 24px;
+    color: #FFFCDD;
+    font-weight: 100;
   }
-  p {
-    font-size: 28px;
-    line-height: 39px;
-    padding: 0px;
-    margin: 0 0 7px 0;
+  h2 {
+    color: #FFFCDD;
   }
 }
 
