@@ -1,20 +1,51 @@
 @import url(http://fonts.googleapis.com/css?family=Alex+Brush);
+@import "compass";
 @import 'foundation_and_overrides';
-@import 'variables';
+@import 'vendor/icomoon';
 
-@import 'lib/onepage';
+html, body { height: 100%; }
 
 body {
-  background-color: #AD6676;
+}
+.nav {
+  @include background(
+    linear-gradient(top, hsla(244, 13, 83, 0.1), hsla(244, 13, 83, 0.7))
+  );
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 50px;
+  font-size: 28px;
+  line-height: 50px;
+  display: table;
+  table-layout: fixed;
+
+  li {
+    display: table-cell;
+    text-align: center;
+
+    a {
+      color: white;
+
+      &:hover {
+        color: #AD6676;
+      }
+    }
+  }
 }
 
 section {
-  padding: 200px 0 0 0;
-  /*height: $section-height;*/
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .intro {
-  background-color: #C44D58;
+  background-color: #AD6676;
+  padding-top: 20vh;
   text-align: center;
 
   h1 {
@@ -33,6 +64,7 @@ section {
 }
 
 .photos {
+  padding-top: 20vh;
   text-align: center;
   background-color: #556270;
 
@@ -40,6 +72,7 @@ section {
     margin: 30px 0 0 0;
     font-family: 'Avenir Next';
     color: #FF6B6B;
+    font-weight: 100;
   }
 
   .img {
@@ -66,8 +99,17 @@ section {
   }
 }
 
-.day-and-venue {
+.venue {
+  #map-canvas {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.day {
+  padding-top: 20vh;
   background-color: #4ECDC4;
+  text-align: center;
 
   h1 {
     font-size: 24px;
@@ -78,21 +120,5 @@ section {
     padding: 0px;
     margin: 0 0 7px 0;
   }
-  .day {
-    text-align: center;
-  }
-
-  .venue {
-    text-align: center;
-  }
 }
 
-.join {
-  text-align: center;
-  background-color: #FF6B6B;
-
-  a {
-    font-size: em-calc(24);
-    color: #556270;
-  }
-}

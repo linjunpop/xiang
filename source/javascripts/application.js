@@ -14,5 +14,3 @@
 //= require_self
 //
 
-$(".welcome").onepage_scroll();
-

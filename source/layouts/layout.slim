@@ -8,9 +8,22 @@ html
     meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 
     = stylesheet_link_tag "application", media: 'all'
-    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
 
-  body[class=page_classes]
+  body[class="#{page_classes}-page"]
     = yield
+    ul.nav
+      li
+        = link_to "index.html" do
+          i.icon-home
+      li
+        = link_to "photos.html" do
+          i.icon-photos
+      li
+        = link_to "day.html" do
+          i.icon-calendar
+      li
+        = link_to "venue.html" do
+          i.icon-location
+
     = javascript_include_tag  "application"
 
