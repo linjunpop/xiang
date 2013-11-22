@@ -2,6 +2,14 @@
 @import "compass";
 @import 'foundation_and_overrides';
 @import 'vendor/icomoon';
+@import 'vendor/animate/animate';
+
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx)";
 
 html, body { height: 100%; }
 
@@ -49,6 +57,8 @@ section {
   text-align: center;
 
   h1 {
+    @include tada(2s, 0.2s, ease, both, hidden);
+
     font-family: 'Alex Brush', cursive;
     font-size: 82px;
   }
@@ -58,8 +68,13 @@ section {
     font-weight: 500;
   }
   h3 {
+    @include swing(2s, 3s, ease, both, visible);
+
     font-family: 'Alex Brush', cursive;
     color: #556270;
+  }
+  h4 {
+    @include bounceInDown(2s, 5s, ease, both, hidden);
   }
 }
 
@@ -75,7 +90,9 @@ section {
     font-weight: 100;
   }
 
-  .img {
+  .photo {
+    @include tada(3s, 1s, ease, both, hidden);
+
     width: 300px;
     height: 300px;
     border-radius: 150px;
