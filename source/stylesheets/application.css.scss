@@ -6,6 +6,7 @@
 @import 'vendor/animate/properties';
 @import 'vendor/animate/tada';
 @import 'vendor/animate/swing';
+@import 'vendor/animate/pulse';
 @import 'vendor/animate/bounceInDown';
 
 html, body { height: 100%; }
@@ -147,6 +148,17 @@ section {
   }
   h2 {
     color: #FFFCDD;
+  }
+  .countdown-wrapper {
+    @include pulse(2.7s, 1s, ease, both, hidden);
+    -webkit-animation-iteration-count: infinite;
+    width: 200px;
+    height: 200px;
+    background-color: #FFFCDD;
+    display: inline-block;
+    line-height: 200px;
+    font-family: 'Alex Brush', cursive;
+    font-size: 28px;
   }
 }
 
