@@ -10,7 +10,8 @@ html
     = stylesheet_link_tag "application", media: 'all'
 
   body[class="#{page_classes}-page"]
-    = yield
+    .wrapper
+      = yield
     ul.nav
       li
         = link_to "index.html" do
