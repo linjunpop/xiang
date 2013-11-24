@@ -56,7 +56,6 @@ body {
 section {
   display: table-cell;
   vertical-align: middle;
-  min-height: 700px;
 }
 
 .intro {
@@ -90,7 +89,7 @@ section {
   background-color: #DCF7F3;
 
   & > div {
-    @include screen(768px, 1280px) {
+    @include min-screen(768px) {
       width: 50%;
       display: inline-block;
     }
