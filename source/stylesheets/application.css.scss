@@ -9,6 +9,15 @@
 @import 'vendor/animate/pulse';
 @import 'vendor/animate/bounceInDown';
 
+$yellow: HSLA(35.00, 85.71%, 97.25%, 1.00);
+$purple: HSLA(310.71, 35.44%, 30.98%, 1.00);
+$pink: HSLA(358.06, 73.81%, 67.06%, 1.00);
+$blue: HSLA(203.48, 21.10%, 57.25%, 1.00);
+
+$navBgColor: HSLA(203.48, 21.10%, 57.25%, 0.7);
+$navColor: $yellow;
+$navHoverColor: white;
+
 html, body { height: 100%; }
 body {
   font-family: 'Avenir Next';
@@ -16,7 +25,7 @@ body {
 }
 
 .nav {
-  background-color: hsla(1, 12, 100, 0.7);
+  background-color: $navBgColor;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -35,11 +44,11 @@ body {
 
     a {
       text-decoration: none;
-      color: #AEBBC9;
+      color: $navColor;
       text-shadow: 0 0 0 #000;
 
       &:hover {
-        color: #805841;
+        color: $navHoverColor;
       }
     }
   }
@@ -59,7 +68,7 @@ section {
 }
 
 .intro {
-  background-color: #FFFCDD;
+  background-color: $yellow;
   text-align: center;
 
   h1 {
@@ -67,26 +76,34 @@ section {
 
     font-family: 'Alex Brush', cursive;
     font-size: 60px;
+    color: HSLA(0.48, 83.89%, 70.78%, 1.00);
   }
   h2 {
     font-family: 'Avenir Next';
     font-size: 32px;
     font-weight: 500;
+    color: $purple;
   }
   h3 {
     @include swing(2s, 3s, ease, both, visible);
 
     font-family: 'Alex Brush', cursive;
-    color: #AD6676;
+    color: $pink;
   }
-  h4 {
+  a {
     @include bounceInDown(2s, 5s, ease, both, hidden);
+
+    display: inline-block;
+    background-color: $purple;
+    padding: 12px;
+    color: $yellow;
+    text-decoration: none;
   }
 }
 
 .photos {
   text-align: center;
-  background-color: #DCF7F3;
+  background-color: $yellow;
 
   & > div {
     @include min-screen(768px) {
@@ -98,7 +115,7 @@ section {
   h3 {
     margin: 30px 0 0 0;
     font-family: 'Avenir Next';
-    color: #805841;
+    color: $pink;
     font-weight: 100;
   }
 
@@ -109,7 +126,7 @@ section {
     height: $photo_size;
     border-radius: $photo_size / 2;
     margin: 0 auto;
-    box-shadow: 0 0 10px #F5A2A2;
+    box-shadow: 0 0 10px $blue;
     background-size: $photo_size;
   }
   .photo-jun {
@@ -138,22 +155,23 @@ section {
 }
 
 .day {
-  background-color: #805841;
+  background-color: $yellow;
   text-align: center;
 
   h1 {
-    color: #FFFCDD;
+    color: $pink;
     font-weight: 100;
   }
   h2 {
-    color: #FFFCDD;
+    color: $purple;
   }
   .countdown-wrapper {
     @include pulse(2.7s, 1s, ease, both, hidden);
     -webkit-animation-iteration-count: infinite;
     width: 200px;
     height: 200px;
-    background-color: #FFFCDD;
+    background-color: $purple;
+    color: $yellow;
     display: inline-block;
     line-height: 200px;
     font-family: 'Alex Brush', cursive;
