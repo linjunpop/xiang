@@ -91,7 +91,7 @@ section {
     color: $pink;
   }
   a {
-    @include bounceInDown(2s, 5s, ease, both, hidden);
+    @include bounceInDown(2s, 1s, ease, both, hidden);
 
     display: inline-block;
     background-color: $purple;
