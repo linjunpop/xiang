@@ -41,6 +41,12 @@ body {
     display: table-cell;
     text-align: center;
 
+    &.active {
+      a {
+        color: $purple;
+      }
+    }
+
     a {
       text-decoration: none;
       color: $navColor;

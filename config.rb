@@ -1,5 +1,8 @@
 require 'slim'
 require 'zurb-foundation'
+require "lib/custom_helpers"
+
+helpers CustomHelpers
 
 preferred_syntax = :scss
 

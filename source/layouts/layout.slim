@@ -13,16 +13,16 @@ html
     .wrapper
       = yield
     ul.nav
-      li
-        = link_to "index.html" do
+      li[class=active_tag_for('/')]
+        = link_to "/" do
           i.icon-home
-      li
+      li[class=active_tag_for('photos.html')]
         = link_to "photos.html" do
           i.icon-photos
-      li
+      li[class=active_tag_for('day.html')]
         = link_to "day.html" do
           i.icon-calendar
-      li
+      li[class=active_tag_for('venue.html')]
         = link_to "venue.html" do
           i.icon-location
 
