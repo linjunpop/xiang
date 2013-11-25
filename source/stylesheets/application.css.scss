@@ -1,103 +1,181 @@
-@import 'foundation_and_overrides';
-@import 'variables';
+@import url(http://fonts.googleapis.com/css?family=Alex+Brush);
+@import "compass";
+@import 'vendor/media-queries';
+@import 'vendor/icomoon';
 
+@import 'vendor/animate/properties';
+@import 'vendor/animate/tada';
+@import 'vendor/animate/swing';
+@import 'vendor/animate/pulse';
+@import 'vendor/animate/bounceInDown';
+
+$yellow: HSLA(35.00, 85.71%, 97.25%, 1.00);
+$purple: HSLA(310.71, 35.44%, 30.98%, 1.00);
+$pink: HSLA(358.06, 73.81%, 67.06%, 1.00);
+$blue: HSLA(203.48, 21.10%, 57.25%, 1.00);
+
+$navBgColor: HSLA(203.48, 21.10%, 57.25%, 0.7);
+$navColor: $yellow;
+$navHoverColor: white;
+
+html, body { height: 100%; }
 body {
-  background-image: image-url('bg.png');
+  font-family: 'Avenir Next';
+  margin: 0;
+}
 
-  @media #{$retina} {
-    background-image: image-url('bg@2x.png');
+.nav {
+  background-color: $navBgColor;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  bottom: 2vh;
+  width: 100vw;
+  height: 50px;
+  font-size: 28px;
+  line-height: 50px;
+  display: table;
+  table-layout: fixed;
+
+  li {
+    display: table-cell;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: $navColor;
+      text-shadow: 0 0 0 #000;
+
+      &:hover {
+        color: $navHoverColor;
+      }
+    }
   }
 }
 
-.welcome {
-  @media #{$large} {
-    margin: 3em auto 5em auto;
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.intro {
+  background-color: $yellow;
+  text-align: center;
+
+  h1 {
+    @include tada(2s, 0.2s, ease, both, hidden);
+
+    font-family: 'Alex Brush', cursive;
+    font-size: 60px;
+    color: HSLA(0.48, 83.89%, 70.78%, 1.00);
+  }
+  h2 {
+    font-family: 'Avenir Next';
+    font-size: 32px;
+    font-weight: 500;
+    color: $purple;
+  }
+  h3 {
+    @include swing(2s, 3s, ease, both, visible);
+
+    font-family: 'Alex Brush', cursive;
+    color: $pink;
+  }
+  a {
+    @include bounceInDown(2s, 5s, ease, both, hidden);
+
+    display: inline-block;
+    background-color: $purple;
+    padding: 12px;
+    color: $yellow;
+    text-decoration: none;
+  }
+}
+
+.photos {
+  text-align: center;
+  background-color: $yellow;
+
+  & > div {
+    @include min-screen(768px) {
+      width: 50%;
+      display: inline-block;
+    }
   }
 
-  section {
-    height: $section-height;
+  h3 {
+    margin: 30px 0 0 0;
+    font-family: 'Avenir Next';
+    color: $pink;
+    font-weight: 100;
+  }
 
-    &.hero {
-      background-image: image-url('hero.jpg');
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-      @media #{$retina} {
-        background-image: image-url('hero@2x.jpg');
-      }
+  .photo {
+    $photo_size: 200px;
 
-      .hero-body{
-        padding: 30px 0 0 0;
-        background-color: rgba(235, 94, 99, 0.9);
-        height: 100%;
-        color: white;
-        text-align: center;
+    width: $photo_size;
+    height: $photo_size;
+    border-radius: $photo_size / 2;
+    margin: 0 auto;
+    box-shadow: 0 0 10px $blue;
+    background-size: $photo_size;
+  }
+  .photo-jun {
+    @include bounceInDown(1s, 1s, ease, both, hidden);
+    background-image: image-url('jun.jpg');
 
-        p.hero-names {
-          display: block;
-          width: 298px;
-          height: 265px;
-          text-indent: -9999px;
-          margin: 35px auto 34px;
-          background-position:50% 0;
-          background-repeat:no-repeat;
-          background-size: 298px 265px;
-          background-image: image-url('logo.png');
-          @media #{$retina} {
-            background-image: image-url('logo@2x.png');
-          }
-
-        }
-
-        .hero-info {
-          display: block;
-          width: 273px;
-          height: 131px;
-          text-indent: -9999px;
-          margin: 0 auto;
-          background-position:50% 0;
-          background-repeat:no-repeat;
-          background-size: 273px 131px;
-          background-image: image-url('info.png');
-          @media #{$retina} {
-            background-image: image-url('info@2x.png');
-          }
-
-          p {
-            display: none;
-          }
-        }
-
-        p {
-          font-size: em-calc(36);
-          margin: 10px 0;
-          padding: 0;
-          line-height: $header-line-height;
-        }
-
-
-        .hero-heart {
-          display: none;
-          a {
-            font-size: em-calc(79);
-            color: #f9829b;
-          }
-        }
-      }
+    @include hdpi {
+      background-image: image-url('jun@2x.jpg');
     }
+  }
+  .photo-xiang {
+    @include bounceInDown(2s, 1s, ease, both, hidden);
+    background-image: image-url('xiang.jpg');
 
-    &.place {
-      #map-canvas {
-        height: 100%;
-      }
+    @include hdpi {
+      background-image: image-url('xiang@2x.jpg');
     }
+  }
+}
 
-    &.join {
-      background-color: #CFD2B7;
-      line-height: $section-height;
+.venue {
+  #map-canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}
 
-      .join-button {
-      }
-    }
+.day {
+  background-color: $yellow;
+  text-align: center;
+
+  h1 {
+    color: $pink;
+    font-weight: 100;
+  }
+  h2 {
+    color: $purple;
+  }
+  .countdown-wrapper {
+    @include pulse(2.7s, 1s, ease, both, hidden);
+    -webkit-animation-iteration-count: infinite;
+    width: 200px;
+    height: 200px;
+    background-color: $purple;
+    color: $yellow;
+    display: inline-block;
+    line-height: 200px;
+    font-family: 'Alex Brush', cursive;
+    font-size: 28px;
   }
 }
 

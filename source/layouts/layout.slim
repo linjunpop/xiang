@@ -3,13 +3,28 @@ html
   head
     meta charset="utf-8"
 
-    title Jun and Xiang | #{current_page.data.title || 'January 1st, 2014' }
+    title Jun & Xiang are getting married. Yay! #{current_page.data.title}
 
     meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 
     = stylesheet_link_tag "application", media: 'all'
 
-  body[class=page_classes]
-    = yield
+  body[class="#{page_classes}-page"]
+    .wrapper
+      = yield
+    ul.nav
+      li
+        = link_to "index.html" do
+          i.icon-home
+      li
+        = link_to "photos.html" do
+          i.icon-photos
+      li
+        = link_to "day.html" do
+          i.icon-calendar
+      li
+        = link_to "venue.html" do
+          i.icon-location
+
     = javascript_include_tag  "application"
 
