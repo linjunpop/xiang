@@ -16,7 +16,6 @@ $blue: HSLA(203.48, 21.10%, 57.25%, 1.00);
 
 $navBgColor: HSLA(203.48, 21.10%, 57.25%, 0.7);
 $navColor: $yellow;
-$navHoverColor: white;
 
 html, body { height: 100%; }
 body {
@@ -48,7 +47,7 @@ body {
       text-shadow: 0 0 0 #000;
 
       &:hover {
-        color: $navHoverColor;
+        color: $purple;
       }
     }
   }
@@ -126,8 +125,9 @@ section {
     height: $photo_size;
     border-radius: $photo_size / 2;
     margin: 0 auto;
-    box-shadow: 0 0 10px $blue;
+    box-shadow: 0 0 6px HSLA(0.00, 0.00%, 0.00%, 0.60);
     background-size: $photo_size;
+    border: #fff solid 4px;
   }
   .photo-jun {
     @include bounceInDown(1s, 1s, ease, both, hidden);
@@ -168,14 +168,14 @@ section {
   .countdown-wrapper {
     @include pulse(2.7s, 1s, ease, both, hidden);
     -webkit-animation-iteration-count: infinite;
-    width: 200px;
-    height: 200px;
-    background-color: $purple;
+    width: 150px;
+    height: 150px;
+    background-color: $pink;
     color: $yellow;
     display: inline-block;
-    line-height: 200px;
+    line-height: 150px;
     font-family: 'Alex Brush', cursive;
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 
