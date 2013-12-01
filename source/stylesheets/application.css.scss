@@ -100,9 +100,15 @@ section {
 
     display: inline-block;
     background-color: $purple;
-    padding: 12px;
+    padding: 16px;
+    font-size: 14px;
     color: $yellow;
     text-decoration: none;
+
+    &:hover {
+      color: $purple;
+      background-color: $pink;
+    }
   }
 }
 
@@ -174,6 +180,8 @@ section {
   .countdown-wrapper {
     @include pulse(2.7s, 1s, ease, both, hidden);
     -webkit-animation-iteration-count: infinite;
+
+    text-decoration: none;
     width: 150px;
     height: 150px;
     background-color: $pink;
