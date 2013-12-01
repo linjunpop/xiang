@@ -21,6 +21,13 @@ html, body { height: 100%; }
 body {
   font-family: 'Avenir Next';
   margin: 0;
+
+  @include iphone5 {
+    zoom: 0.9;
+  }
+  @include iphone4 {
+    zoom: 0.7;
+  }
 }
 
 .nav {
