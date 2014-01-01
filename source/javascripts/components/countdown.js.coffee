@@ -4,9 +4,7 @@ if $countdown = document.querySelector('.countdown')
 
   msPerDay = 24 * 60 * 60 * 1000
 
-  timeLeft = theDay.getTime() - today.getTime()
-  e_daysLeft = timeLeft / msPerDay
-  daysLeft = Math.floor(e_daysLeft)
+  timeSince = today.getTime() - theDay.getTime()
+  daysSince = Math.floor(timeSince / msPerDay)
 
-  $countdown.innerHTML = daysLeft
-
+  $countdown.innerHTML = daysSince
